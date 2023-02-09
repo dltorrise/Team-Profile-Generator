@@ -1,7 +1,5 @@
 # Team Profile Generator
 
-  
-  
   ## Table of Contents
   
   - i. [Description](#description)
@@ -10,8 +8,8 @@
     - ii. [Usage](#usage)
     - iii. [Contributions](#contributions)
     - iv. [Tests](#tests)
-  - iii. [License](#license)
-  - iv. [Questions](#questions)
+  -iv. [Screenshot](#screenshot)
+  -v. [Demo](dDemo)
 
   ## Description
   
@@ -39,4 +37,4 @@
 
   ```npm test```
  
-
+## Demo

@@ -1,22 +1,23 @@
 const Employee = require("../lib/Employee")
 
 describe("Employee", () => {
-    describe("Initialization"), () => {
-        it ("should return an object containing a 'string' property when called with the 'new' keyword", () => {
+    describe("Initialization", () => {
+        it ("should create an object", () => {
         const obj = new Employee();
 
-        expect("string" in obj).toEqual(true);
+        expect(typeof(obj)).toEqual("object");
         }
-)}
-    
-    describe("Input"), () => {
-        it("should only accept input that is two words: first and last name", () => {
+        );
+    })
+    describe("Input", () => {
+        it("should return string as a name", () => {
         const name = "John Doe"
         const obj = new Employee(name)
+        expect(obj.name).toEqual(name);
         
         }
-        )}
+        )
     
-
+    })
 
 })

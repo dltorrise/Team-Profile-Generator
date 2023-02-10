@@ -8,8 +8,8 @@
     - ii. [Usage](#usage)
     - iii. [Contributions](#contributions)
     - iv. [Tests](#tests)
-  -iv. [Screenshot](#screenshot)
-  -v. [Demo](dDemo)
+  - iv. [Screenshot](#screenshot)
+  - v. [Demo](dDemo)
 
   ## Description
   
@@ -19,7 +19,7 @@
   
   ### Installation
   
-  To use Node js and the necessary dependencies, run the following commands:
+  To use my application you must have Node js installed and run the following commands:
   
   ```
   npm init -y
@@ -43,14 +43,20 @@
   npm test
   ```
 
-  Important Note: Make sure if in you package.json, under `scripts` you have written:
+  **Important Note:** Make sure in your package.json file, under `scripts` you have written:
 
 ```
 "tests": "jest"
 ```
 
-This is important to test your code and package.json may automatically populate this field with something different. 
+This is important to test your code and note that package.json may automatically populate this field with something different. 
  
+## Screenshot
+
+Below is a sample screenshot of the application:
+
+![Example of Team Members](./images/screenshot.png)
+
 ## Demo
 
-[Link](https://watch.screencastify.com/v/kkG61Fughk6xOyKgOduQ)
+[Demo Link](https://watch.screencastify.com/v/kkG61Fughk6xOyKgOduQ)

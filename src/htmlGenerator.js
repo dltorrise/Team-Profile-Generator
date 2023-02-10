@@ -24,7 +24,7 @@ var htmlGenerate = function(manager){
                 <p>${manager.getRole()}</p>
                 <p>Employee ID: ${manager.getID()}</p>
                 <p>Office #: ${manager.getOfficeNumber()}</p>
-                <a class="my-1" href="mailto: ${manager.getEmail()}? subject:'Inquiry about ${manager.getProject()}'">Send Email</a>
+                <a class="my-1" href="mailto: ${manager.getEmail()}">Send Email</a>
             </div>
     `
     return htmlFile
@@ -38,7 +38,7 @@ var htmlGenerateEngineer = function(engineers) {
         <p>${engineers.getRole()}</p>
         <p>Employee ID: ${engineers.getID()}</p>
         <a class="my-1" href="https://github.com/${engineers.getGithub()}">Github Username: ${engineers.getGithub()}</a>
-        <a class="my-1" href="mailto: ${engineers.getEmail()}? subject:'Inquiry about ${engineers.getProject()}'">Send Email</a>
+        <a class="my-1" href="mailto: ${engineers.getEmail()}">Send Email</a>
     </div>
     `
     return appendEngineer
@@ -52,7 +52,7 @@ var htmlGenerateIntern = function(interns) {
         <p>${interns.getRole()}</p>
         <p>Employee ID: ${interns.getID()}</p>
         <p>University: ${interns.getSchool()}</p>
-        <a class="my-1" href="mailto: ${interns.getEmail()}? subject:'Inquiry about ${interns.getProject()}'">Send Email</a>
+        <a class="my-1" href="mailto: ${interns.getEmail()}">Send Email</a>
     </div>`
     return appendIntern
 }

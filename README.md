@@ -19,9 +19,11 @@
   
   ### Installation
   
-  To install the necessary dependencies, run the following command:
+  To use Node js and the necessary dependencies, run the following commands:
   
-  ```npm init```
+  ```npm init -y
+  npm i inquirer@8.2.4
+  npm i jest```
 
   ### Usage 
 
@@ -36,5 +38,13 @@
   To run tests on the code, use the following command:
 
   ```npm test```
+
+  Important Note: Make sure if in you package.json, under `scripts` you have written:
+
+```"tests": "jest"```
+
+This is important to test your code and package.json may automatically populate this field with something different. 
  
 ## Demo
+
+[Link](https://watch.screencastify.com/v/7CTPJzfwmzQbZS9pARFu)

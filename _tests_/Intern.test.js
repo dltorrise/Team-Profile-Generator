@@ -1,5 +1,5 @@
 const Intern = require("../lib/Intern")
-
+//school, role
 describe("Intern", () => {
     describe("Initialization", () => {
         it ("should create an object", () => {
@@ -9,15 +9,19 @@ describe("Intern", () => {
         }
         );
     })
-    describe("Input", () => {
-        it("should return string as a name", () => {
-        const name = "John Doe"
-        const obj = new Intern(name)
-        expect(obj.name).toEqual(name);
-        
-        }
-        )
     
+    describe("Intern Role", () => {
+        it("should return role to be 'Intern'", () => {
+        const role = "Intern"
+        const obj = new Intern("John Doe", 1, "deetee@gmail.com", "Northwestern")
+        expect(obj.getRole()).toEqual(role)
+        })
     })
-
+    describe("Intern school", () => {
+        it("should return the school passed to it", () => {
+        const school = "Northwestern"
+        const obj = new Intern("John Doe", 1, "deetee@gmail.com", school)
+        expect(obj.getSchool()).toEqual(school)
+        })
+    })
 })

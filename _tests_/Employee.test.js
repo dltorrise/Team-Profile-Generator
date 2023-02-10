@@ -20,4 +20,27 @@ describe("Employee", () => {
     
     })
 
+    describe("Employee Role", () => {
+        it("should return role to be 'Employee'", () => {
+        const role = "Employee"
+        const obj = new Employee(role)
+        expect(obj.getRole()).toEqual(role)
+        })
+    })
+
+    describe("Employee ID", () => {
+        it("should return the ID passed to it", () => {
+        const identification = 1
+        const obj = new Employee("John Doe", identification, "deetee@gmail.com")
+        expect(obj.getID()).toEqual(identification)
+        })
+    })
+
+    describe("Employee email", () => {
+        it("should return the email passed to it", () => {
+        const email = "deetee@gmail.com"
+        const obj = new Employee("John Doe", 1, email)
+        expect(obj.getEmail()).toEqual(email)
+        })
+    })
 })

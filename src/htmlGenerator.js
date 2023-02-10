@@ -5,10 +5,15 @@ const Intern = require('../lib/Intern')
 const Manager = require('../lib/Manager')
 
 
+//add margins
+//loop over the array 
+//have a template string
+
+
 //*FUNCTIONS*
 //generates the beginning of the html and also manager card
 //uses bootstrap plugin
-var htmlGenerate = function(){
+var htmlGenerate = function(manager){
     htmlFile = `
     <!DOCTYPE html>
 <html lang="en">
@@ -19,28 +24,28 @@ var htmlGenerate = function(){
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
     <title>Team Member's Profile</title>
 </head>
-<body>
-    <h1>Team Members</h1>
-    <div class="card">
-    <h2>${Employee.getName()}</h2>
-    <p>${Manager.getRole()}</p>
-    <p>Employee ID: ${Employee.getID()}</p>
-    <p>Office #: ${Employee.officeNumber}</p>
-    <a href="${Employee.getEmail()}">Contact</p>
+<body class="d-flex flex-wrap justify-content-center">
+    <h1 class="text-center .text-secondary">Team Members</h1>
+    <div class="card border border-primary shadow-sm rounded">
+    <h2 class="text-center">${manager.getName()}</h2>
+    <p>${manager.getRole()}</p>
+    <p>Employee ID: ${manager.getID()}</p>
+    <p>Office #: ${manager.getOfficeNumber()}</p>
+    <a href="${manager.getEmail()}">Contact</p>
     </div>
     `
     return htmlFile
   } 
 
 //if enduser decides to add an engineer will append this information to html
-var htmlGenerateEngineer = function() {
+var htmlGenerateEngineer = function(array) {
     appendEngineer = `
-    <div class="card">
-    <h2>${Employee.getName()}</h2>
-    <p>${Engineer.getRole()}</p>
-    <p>Employee ID: ${Employee.getID()}</p>
-    <a href="https://github.com/${Engineer.getGithub()}">Github Username: ${Engineer.getGithub()}</p>
-    <a href="${Employee.getEmail()}">Contact</p>
+    <div class="card border border-primary shadow-sm rounded">
+    <h2 class="text-center>${array.getName()}</h2>
+    <p>${array.getRole()}</p>
+    <p>Employee ID: ${array.getID()}</p>
+    <a href="https://github.com/${array.getGithub()}">Github Username: ${array.getGithub()}</p>
+    <a href="${array.getEmail()}">Contact</p>
     </div>
     `
     return appendEngineer
@@ -49,8 +54,8 @@ var htmlGenerateEngineer = function() {
 //if enduser decides to add an intern will appen this to information to html
 var htmlGenerateIntern = function() {
     appendIntern = `
-    <div class="card">
-    <h2>${Employee.getName()}</h2>
+    <div class="card border border-primary shadow-sm rounded">
+    <h2 class="text-center>${Employee.getName()}</h2>
     <p>${Intern.getRole()}</p>
     <p>Employee ID: ${Employee.getID()}</p>
     <p>University: ${Intern.getSchool()}</p>

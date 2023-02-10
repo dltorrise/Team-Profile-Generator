@@ -12,18 +12,18 @@ var htmlGenerate = function(manager){
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
     <title>Team Member's Profile</title>
 </head>
-    <header>
-    <h1 class="text-center .text-secondary">Team Members</h1>
-    <h3 class="text-center">Below is information of all team members working on a project</h3>
+    <header class="my-3">
+    <h1 class="text-center .text-secondary .bg-light">Team Members</h1>
+    <h3 class="text-center">Information Regarding All of the Team Members</h3>
     </header>
     <body>
         <main class="d-flex flex-wrap justify-content-center">
-            <div class="card border border-primary">
-                <h4 class="text-center">${manager.getName()}</h2>
+            <div class="card border border-success border-3 w-25 p-3 mx-2 my-3 align-self-center text-center .bg-secondary">
+                <h4>${manager.getName()}</h2>
                 <p>${manager.getRole()}</p>
                 <p>Employee ID: ${manager.getID()}</p>
                 <p>Office #: ${manager.getOfficeNumber()}</p>
-                <a href="${manager.getEmail()}">Contact</a>
+                <a class="my-1" href="mailto:${manager.getEmail()}? subject=Inquiry about Project">Contact</a>
             </div>
     `
     return htmlFile
@@ -32,12 +32,12 @@ var htmlGenerate = function(manager){
 //if enduser decides to add an engineer will append this information to html
 var htmlGenerateEngineer = function(engineer) {
     appendEngineer = `
-    <div class="card border border-primary">
-        <h4 class="text-center">${engineer.getName()}</h2>
+    <div class="card border border-primary border-3 w-25 p-3 mx-2 my-3 align-self-center text-center .bg-secondary">
+        <h4>${engineer.getName()}</h2>
         <p>${engineer.getRole()}</p>
         <p>Employee ID: ${engineer.getID()}</p>
-        <a href="https://github.com/${engineer.getGithub()}">Github Username: ${engineer.getGithub()}</a>
-        <a href="${engineer.getEmail()}">Contact</a>
+        <a class="my-1" href="https://github.com/${engineer.getGithub()}">Github Username: ${engineer.getGithub()}</a>
+        <a class="my-1" href="mailto:${engineer.getEmail()}? subject=Inquiry about Project">Contact</a>
     </div>
     `
     return appendEngineer
@@ -46,12 +46,12 @@ var htmlGenerateEngineer = function(engineer) {
 //if enduser decides to add an intern will appen this to information to html
 var htmlGenerateIntern = function(intern) {
     appendIntern = `
-    <div class="card border border-primary">
-        <h4 class="text-center">${intern.getName()}</h2>
+    <div class="card border border-info border-3 w-25 p-3 mx-2 my-3 align-self-center text-center .bg-secondary">
+        <h4>${intern.getName()}</h2>
         <p>${intern.getRole()}</p>
         <p>Employee ID: ${intern.getID()}</p>
         <p>University: ${intern.getSchool()}</p>
-        <a href="${intern.getEmail()}">Contact</a>
+        <a class="my-1" href="mailto:${intern.getEmail()}? subject=Inquiry about Project">Contact</a>
     </div>`
     return appendIntern
 }

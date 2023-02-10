@@ -12,11 +12,21 @@ describe("Employee", () => {
         });
     })
 
-    //tests that Employee object will return name passed into it
+    //tests that Employee object will return project name passed into it
+    describe("Project name", () => {
+        it("should return project name passed into it", () => {
+        const project = "Project"
+        const obj = new Employee(project, "John Doe", 1, "deetee@gmail.com")
+        expect(obj.getProject()).toEqual(project);
+        })
+    
+    })
+
+    //tests that Employee object will return employee name passed into it
     describe("Employee Name", () => {
-        it("should return name passed into it", () => {
+        it("should return employee name passed into it", () => {
         const name = "John Doe"
-        const obj = new Employee(name, 1, "deetee@gmail.com")
+        const obj = new Employee("Project", name, 1, "deetee@gmail.com")
         expect(obj.getName()).toEqual(name);
         })
     
@@ -26,7 +36,7 @@ describe("Employee", () => {
     describe("Employee ID", () => {
         it("should return the ID passed into it", () => {
         const identification = 1
-        const obj = new Employee("John Doe", identification, "deetee@gmail.com")
+        const obj = new Employee("Project", "John Doe", identification, "deetee@gmail.com")
         expect(obj.getID()).toEqual(identification)
         })
     })
@@ -35,7 +45,7 @@ describe("Employee", () => {
     describe("Employee email", () => {
         it("should return the email passed into it", () => {
         const email = "deetee@gmail.com"
-        const obj = new Employee("John Doe", 1, email)
+        const obj = new Employee("Project", "John Doe", 1, email)
         expect(obj.getEmail()).toEqual(email)
         })
     })
@@ -44,7 +54,7 @@ describe("Employee", () => {
     describe("Employee Role", () => {
         it("should return role to be 'Employee'", () => {
         const role = "Employee"
-        const obj = new Employee("John Doe", 1, "deetee@gmail.com", role)
+        const obj = new Employee("Project", "John Doe", 1, "deetee@gmail.com", role)
         expect(obj.getRole()).toEqual(role)
         })
     })

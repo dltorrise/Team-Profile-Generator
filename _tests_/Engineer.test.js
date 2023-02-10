@@ -16,7 +16,7 @@ describe("Engineer", () => {
     describe("Engineer github", () => {
         it("should return the github username passed to it", () => {
         const github = "dltorrise"
-        const obj = new Engineer("John Doe", 1, "deetee@gmail.com", github)
+        const obj = new Engineer("Project", "John Doe", 1, "deetee@gmail.com", github)
         expect(obj.getGithub()).toEqual(github)
         })
     })
@@ -25,7 +25,7 @@ describe("Engineer", () => {
     describe("Engineer Role", () => {
         it("should return role to be 'Engineer'", () => {
         const role = "Engineer"
-        const obj = new Engineer("John Doe", 1, "deetee@gmail.com", "deetee")
+        const obj = new Engineer("Project", "John Doe", 1, "deetee@gmail.com", "deetee")
         expect(obj.getRole()).toEqual(role)
         })
     })

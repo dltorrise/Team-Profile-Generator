@@ -15,7 +15,7 @@ describe("Manager", () => {
     describe("Manager Office Number", () => {
         it("should return the office number passed to it", () => {
         const officeNumber = "01"
-        const obj = new Manager("John Doe", 1, "deetee@gmail.com", officeNumber)
+        const obj = new Manager("Project", "John Doe", 1, "deetee@gmail.com", officeNumber)
         expect(obj.getOfficeNumber()).toEqual(officeNumber)
         })
     })
@@ -24,7 +24,7 @@ describe("Manager", () => {
     describe("Manager Role", () => {
         it("should return role to be 'Manager'", () => {
         const role = "Manager"
-        const obj = new Manager("John Doe", 1, "deetee@gmail.com", 1)
+        const obj = new Manager("Project", "John Doe", 1, "deetee@gmail.com", 1)
         expect(obj.getRole()).toEqual(role)
         })
     })

@@ -14,7 +14,7 @@ describe("Intern", () => {
     describe("Intern school", () => {
         it("should return the school passed to it", () => {
         const school = "Northwestern"
-        const obj = new Intern("John Doe", 1, "deetee@gmail.com", school)
+        const obj = new Intern("Project", "John Doe", 1, "deetee@gmail.com", school)
         expect(obj.getSchool()).toEqual(school)
         })
     })
@@ -23,7 +23,7 @@ describe("Intern", () => {
     describe("Intern Role", () => {
         it("should return role to be 'Intern'", () => {
         const role = "Intern"
-        const obj = new Intern("John Doe", 1, "deetee@gmail.com", "Northwestern")
+        const obj = new Intern("Project", "John Doe", 1, "deetee@gmail.com", "Northwestern")
         expect(obj.getRole()).toEqual(role)
         })
     })

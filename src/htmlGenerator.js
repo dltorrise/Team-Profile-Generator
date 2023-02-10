@@ -4,17 +4,18 @@
 var htmlGenerate = function(manager){
     htmlFile = `<!--Document generated in command line-->
     <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-secondary">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
-    <title>Team Member's Profile</title>
+    <title>${manager.getProject()}Team Members</title>
 </head>
+<div class="bg-secondary">
     <header class="my-3">
     <h1 class="text-center">Team Members</h1>
-    <h3 class="text-center">Information Regarding All of the Team Members</h3>
+    <h3 class="text-center">Information Regarding All of the Team Members working on ${manager.getProject()}</h3>
     </header>
     <body>
         <main class="d-flex flex-wrap justify-content-center row">
@@ -23,7 +24,7 @@ var htmlGenerate = function(manager){
                 <p>${manager.getRole()}</p>
                 <p>Employee ID: ${manager.getID()}</p>
                 <p>Office #: ${manager.getOfficeNumber()}</p>
-                <a class="my-1" href="mailto: ${manager.getEmail()}">Send Email</a>
+                <a class="my-1" href="mailto: ${manager.getEmail()}? subject:'Inquiry about ${manager.getProject()}'">Send Email</a>
             </div>
     `
     return htmlFile
@@ -37,7 +38,7 @@ var htmlGenerateEngineer = function(engineer) {
         <p>${engineer.getRole()}</p>
         <p>Employee ID: ${engineer.getID()}</p>
         <a class="my-1" href="https://github.com/${engineer.getGithub()}">Github Username: ${engineer.getGithub()}</a>
-        <a class="my-1" href="mailto: ${engineer.getEmail()}">Send Email</a>
+        <a class="my-1" href="mailto: ${engineer.getEmail()}? subject:'Inquiry about ${engineer.getProject()}'">Send Email</a>
     </div>
     `
     return appendEngineer
@@ -51,7 +52,7 @@ var htmlGenerateIntern = function(intern) {
         <p>${intern.getRole()}</p>
         <p>Employee ID: ${intern.getID()}</p>
         <p>University: ${intern.getSchool()}</p>
-        <a class="my-1" href="mailto: ${intern.getEmail()}">Send Email</a>
+        <a class="my-1" href="mailto: ${intern.getEmail()}? subject:'Inquiry about ${intern.getProject()}'">Send Email</a>
     </div>`
     return appendIntern
 }
@@ -61,6 +62,7 @@ var finishHTML = function() {
     appendEnd = `
     </main>
     </body>
+    </div>
     </html>
     `
     return appendEnd

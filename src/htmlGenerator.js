@@ -20,7 +20,7 @@ var htmlGenerate = function(manager){
     <body>
         <main class="d-flex flex-wrap justify-content-center row">
             <div class="card border border-success border-3 w-25 p-3 mx-2 my-3 align-self-center text-center">
-                <h4>${manager.getName()}</h2>
+                <h4>${manager.getName()}</h4>
                 <p>${manager.getRole()}</p>
                 <p>Employee ID: ${manager.getID()}</p>
                 <p>Office #: ${manager.getOfficeNumber()}</p>
@@ -31,28 +31,28 @@ var htmlGenerate = function(manager){
   } 
 
 //if enduser decides to add an engineer will append this information to html
-var htmlGenerateEngineer = function(engineer) {
+var htmlGenerateEngineer = function(engineers) {
     appendEngineer = `
     <div class="card border border-primary border-3 w-25 p-3 mx-2 my-3 align-self-center text-center">
-        <h4>${engineer.getName()}</h2>
-        <p>${engineer.getRole()}</p>
-        <p>Employee ID: ${engineer.getID()}</p>
-        <a class="my-1" href="https://github.com/${engineer.getGithub()}">Github Username: ${engineer.getGithub()}</a>
-        <a class="my-1" href="mailto: ${engineer.getEmail()}? subject:'Inquiry about ${engineer.getProject()}'">Send Email</a>
+        <h4>${engineers.getName()}</h4>
+        <p>${engineers.getRole()}</p>
+        <p>Employee ID: ${engineers.getID()}</p>
+        <a class="my-1" href="https://github.com/${engineers.getGithub()}">Github Username: ${engineers.getGithub()}</a>
+        <a class="my-1" href="mailto: ${engineers.getEmail()}? subject:'Inquiry about ${engineers.getProject()}'">Send Email</a>
     </div>
     `
     return appendEngineer
 }
 
 //if enduser decides to add an intern will appen this to information to html
-var htmlGenerateIntern = function(intern) {
+var htmlGenerateIntern = function(interns) {
     appendIntern = `
     <div class="card border border-info border-3 w-25 p-3 mx-2 my-3 align-self-center text-center">
-        <h4>${intern.getName()}</h2>
-        <p>${intern.getRole()}</p>
-        <p>Employee ID: ${intern.getID()}</p>
-        <p>University: ${intern.getSchool()}</p>
-        <a class="my-1" href="mailto: ${intern.getEmail()}? subject:'Inquiry about ${intern.getProject()}'">Send Email</a>
+        <h4>${interns.getName()}</h4>
+        <p>${interns.getRole()}</p>
+        <p>Employee ID: ${interns.getID()}</p>
+        <p>University: ${interns.getSchool()}</p>
+        <a class="my-1" href="mailto: ${interns.getEmail()}? subject:'Inquiry about ${interns.getProject()}'">Send Email</a>
     </div>`
     return appendIntern
 }

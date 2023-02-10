@@ -87,3 +87,4 @@ node_modules/
 # from README
 index.js
 package.json
+./dist/team-profile.html

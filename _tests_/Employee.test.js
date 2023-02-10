@@ -1,46 +1,51 @@
+//*IMPORTS*
 const Employee = require("../lib/Employee")
 
+//*TESTS*
 describe("Employee", () => {
+
+    //tests that the Employee object is created
     describe("Initialization", () => {
         it ("should create an object", () => {
         const obj = new Employee();
-
         expect(typeof(obj)).toEqual("object");
-        }
-        );
+        });
     })
-    describe("Input", () => {
-        it("should return string as a name", () => {
+
+    //tests that Employee object will return name passed into it
+    describe("Employee Name", () => {
+        it("should return name passed into it", () => {
         const name = "John Doe"
-        const obj = new Employee(name)
-        expect(obj.name).toEqual(name);
-        
-        }
-        )
+        const obj = new Employee(name, 1, "deetee@gmail.com")
+        expect(obj.getName()).toEqual(name);
+        })
     
     })
-
-    describe("Employee Role", () => {
-        it("should return role to be 'Employee'", () => {
-        const role = "Employee"
-        const obj = new Employee(role)
-        expect(obj.getRole()).toEqual(role)
-        })
-    })
-
+    
+    //tests that Employee object will return id passed into it
     describe("Employee ID", () => {
-        it("should return the ID passed to it", () => {
+        it("should return the ID passed into it", () => {
         const identification = 1
         const obj = new Employee("John Doe", identification, "deetee@gmail.com")
         expect(obj.getID()).toEqual(identification)
         })
     })
 
+    //tests that Employee object will return email passed into it
     describe("Employee email", () => {
-        it("should return the email passed to it", () => {
+        it("should return the email passed into it", () => {
         const email = "deetee@gmail.com"
         const obj = new Employee("John Doe", 1, email)
         expect(obj.getEmail()).toEqual(email)
+        })
+    })
+
+    //tests that Employee object will return correct role
+    describe("Employee Role", () => {
+        it("should return role to be 'Employee'", () => {
+        const role = "Employee"
+        const obj = new Employee("John Doe", 1, "deetee@gmail.com", role)
+        expect(obj.getRole()).toEqual(role)
         })
     })
 })

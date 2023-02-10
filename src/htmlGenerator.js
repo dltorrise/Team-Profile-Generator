@@ -1,10 +1,8 @@
-//more formatting stuff
-
 //*FUNCTIONS*
 //generates the beginning of the html and also manager card
 //uses bootstrap plugin
 var htmlGenerate = function(manager){
-    htmlFile = `
+    htmlFile = `<!--Document generated in command line-->
     <!DOCTYPE html>
 <html lang="en">
 <head>
